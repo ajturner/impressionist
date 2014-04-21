@@ -4,7 +4,8 @@ ImpressionistController::InstanceMethods.send(:define_method, :direct_create_sta
 	base = (defined? Moped) ? Moped::BSON : BSON
 	query_params.reverse_merge!(
 		:impressionable_type => controller_path.singularize.camelize,
-		:impressionable_id=> !base::ObjectId.legal?(params[:id]) ? params[:id] : base::ObjectId.from_string(params[:id])
+		:impressionable_id=> !base::ObjectId.legal?(params[:id]) ? params[:id] : base::ObjectId.from_string(params[:id]),
+    :impressionable_format=> !base::ObjectId.legal?(params[:format]) ? params[:format] : base::ObjectId.from_string(params[:format])
 	)
 	associative_create_statement(query_params)
 end

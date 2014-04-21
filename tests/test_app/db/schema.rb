@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130719024021) do
   create_table "impressions", :force => true do |t|
     t.string   "impressionable_type"
     t.integer  "impressionable_id"
+    t.integer  "impressionable_format"
     t.integer  "user_id"
     t.string   "controller_name"
     t.string   "action_name"

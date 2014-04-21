@@ -10,6 +10,7 @@ class Impression
 
   field :impressionable_id
   field :impressionable_type
+  field :impressionable_format
   field :user_id
   field :controller_name
   field :action_name

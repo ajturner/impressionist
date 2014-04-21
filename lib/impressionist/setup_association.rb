@@ -25,7 +25,8 @@ module Impressionist
 
       def make_accessible
        receiver.
-        attr_accessible(:impressionable_type,
+        attr_accessible(:impressionable_format,
+                        :impressionable_type,
                         :impressionable_id,
                         :controller_name,
                         :request_hash,
