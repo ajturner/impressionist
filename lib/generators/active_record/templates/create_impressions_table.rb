@@ -3,10 +3,10 @@ class CreateImpressionsTable < ActiveRecord::Migration
     create_table :impressions, :force => true do |t|
       t.string :impressionable_type
       t.string :impressionable_id
+      t.string :impressionable_format
       t.string :user_id
       t.string :controller_name
       t.string :action_name
-      t.string :format
       t.string :view_name
       t.string :request_hash
       t.string :ip_address
